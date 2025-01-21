@@ -1,5 +1,5 @@
 {% set name = "jh2" %}
-{% set version = "5.0.6" %}
+{% set version = "5.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jh2-{{ version }}.tar.gz
-  sha256: 326a86cd4c87342a678879266d8da1448266d758bbca2599e29fd824c28b2728
+  sha256: 43d56326d950aae3a0e7f3ebd51bc16c7c9350b3be12e8ca6cf0ed78d4ccaa57
 
 build:
   script:
