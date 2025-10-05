@@ -1,5 +1,5 @@
 {% set name = "jh2" %}
-{% set version = "5.0.9" %}
+{% set version = "5.0.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jh2-{{ version }}.tar.gz
-  sha256: bec06ebc7d37beba62503c955d90580cfa1e5fff2b44f05cebecf2378b7f54b1
+  sha256: 2c737a47bee50dc727f7a766185e110befdceba5efb1c4fa240b1e4399291487
 
 build:
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-  number: 1
+  number: 0
 
 requirements:
   build:
