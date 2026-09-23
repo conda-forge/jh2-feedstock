@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: jh2
-  version: "5.0.14"
+  version: "5.0.15"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/jh2-${{ version }}.tar.gz
-  sha256: 101708db41998159295c403f891dce9d8055a8dd98450c605e6eb7c34751543e
+  sha256: 53fb377caca50441fd1892f60745c44d3ba8c43844c3792e73c34bf9f841adaf
 
 build:
-  number: 1
+  number: 0
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
